@@ -1,1 +1,135 @@
 /* Desenvolva a estilização da sua página aqui */
+header{
+    display: flex;
+    max-width: 1455px;
+    height: 109px;
+    margin: 0 auto;
+    font-weight: 600;
+    line-height: 24.2px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--grey5);
+}
+h1{
+    display: flex;
+    gap: 10px;
+}
+.brand1{
+    color: var(--brand1);
+}
+.grey1{
+    color: var(--grey1);
+}
+.conteiner{
+    max-width: 1455px;
+    margin: 0 auto;
+}
+.top1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 62px;
+}
+.btnTop{
+    display: flex;
+    gap: 17px;
+}
+h2{
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 19.36px;
+}
+.textSoma{
+    display: flex;
+    width: 790px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border: 1.5px solid;
+    border-color: var(--grey4);
+    border-radius: 8px;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    background-color: var(--grey4);
+    color: var(--grey1);
+}
+.text-3{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.text-4{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--grey1);
+}
+.text-5{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.rodape{
+    display: flex;
+    width: 790px;
+    margin: 0 auto;
+    gap: 15px;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--grey5);
+    padding: 16px 244px;
+    border: 1.5s dashed var(--grey3);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.redenrizarItem{
+    display: flex;
+    background-color: var(--mode);
+    border: 1.5px solid var(--grey4);
+    border-radius: 8px;
+    width: 790px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 8px, 16px, 8px, 16px;
+    margin-bottom: 15px;
+
+}
+.redenrizarItem:hover{
+    border: 1.5px solid var(--brand1);
+}
+.redenrizarItemUl{
+    display: flex;
+    flex-direction: row;
+    padding: 8px, 16px, 8px, 16px;
+    justify-items: center;
+    
+}
+.redenrizarItemUlLi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.displayflex{
+    display: flex;
+    align-content: left;
+    justify-items: center;
+}
+.testReder{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0px 150px 0px 30px;
+}
+img{
+    border: 1.5s solid var(--grey4);
+    cursor: pointer;    
+}

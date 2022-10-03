@@ -1,0 +1,15 @@
+.firstInput{
+    width: 360px;
+    height: 28px;
+    background-color: var(--mode);
+    border: 1.5px solid var(--grey3);
+    padding: 0px 16px 0px 16px;
+    border-radius: 8px;
+}
+.firstInput:hover{
+    border: 1.5px solid var(--brand1);
+    cursor: pointer;
+}
+.firstInput:active{
+    border-color: var(--brand1);
+}

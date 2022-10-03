@@ -1,19 +1,20 @@
-const valuesCategory = ["Entrada", "Saída"];
-
-let insertedValues = [
+const dataBase = [
+  {
+    id: 0,
+    value: 199.0,
+    categoryID: 'Retirar',
+    imagem: "./assets/trash.png",
+  },
   {
     id: 1,
-    value: 90.0,
-    categoryID: 0,
+    value: 400.0,
+    categoryID: 'Entrada',
+    imagem: "./assets/trash.png",
   },
   {
     id: 2,
-    value: 40.0,
-    categoryID: 1,
-  },
-  {
-    id: 3,
-    value: 15.5,
-    categoryID: 0,
+    value: 193.0,
+    categoryID: 'Entrada',
+    imagem: "./assets/trash.png",
   },
 ];

@@ -1,0 +1,118 @@
+.btnLogin{
+    display: flex;
+    align-items: center;
+    width: 169px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 0px 14px 0px 14px;
+    border: 1.5px solid var(--brand1);
+    background-color: var(--brand1);
+    color: var(--mode);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.94px;
+    transition: 0.5s;
+}
+.btnLogin:hover{
+    background-color: var(--brand2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btnTodos{
+    width: 89px;
+    height: 27px;
+    font-weight: 600;
+    color: var(--grey1);
+    font-size: 14px;
+    border: 1.5px solid var(--grey3);
+    border-radius: 8px;
+    background-color: var(--mode);
+
+}
+.btnTodos:active{
+    background-color: var(--brand3);
+    color: var(--brand1);
+    border: 1.5px solid var(--brand1);
+}
+.btnTodos:after{
+    background-color: var(--brand3);
+    color: var(--brand1);
+    border: 1.5px solid var(--brand1);
+}
+.btn-modal-1{
+    width: 70px;
+    height: 24px;
+    background-color: var(--mode);
+    border-radius: 8px;
+    border: 1.5px solid var(--grey3);
+    color: var(--grey2);
+}
+.btn-modal-1:hover{
+    border: 1.5px solid var(--brand1);
+    cursor: pointer;
+    color: var(--brand1);
+}
+.btnTeste{
+    display: flex;
+    gap: 12px;
+}
+
+.modal-body-btn{
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding: 30px 26px 0px 0px;
+    gap: 30px;
+}
+.btn-modal-cancel{
+    width: 70px;
+    height: 24px;
+    background-color: var(--grey4);
+    border: 1.5px solid var(--grey4);
+    border-radius: 8px;
+    color: var(--grey1);
+    transition: 0.5s;
+}
+
+.btn-modal-cancel:hover{
+    border: 1.5px solid var(--grey3);
+    color: var(--grey3);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-modal-enviar{
+    width: 70px;
+    height: 24px;
+    background-color: var(--brand1);
+    border: 1.5px solid var(--brand1);
+    border-radius: 8px;
+    color: var(--grey5);
+    transition: 0.5s;
+}
+
+.btn-modal-enviar:hover{
+    border: 1.5px solid var(--brand1);
+    background-color: var(--grey5);
+    color: var(--brand1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btnTestRender{
+    width: 68px;
+    height: 26px;
+    background-color: var(--grey4);
+    border: 1.5s solid var(--grey4);
+    border-radius: 8px;
+    margin: 0px 15px 0px 400px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.52px;
+}
+.btnTestRender:hover{
+    border: 1.5s solid var(--brand1);
+    color: var(--brand1);
+    cursor: pointer;
+    background-color: var(--grey5);
+
+}

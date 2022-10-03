@@ -1,0 +1,117 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(33, 37, 41, 0.5);;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    background-color: var(--mode);
+    width: 428px;
+    height: 350px;
+    border-radius: 4px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 26px 10px 30px;
+  }
+  .modal-title{
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--grey1);
+  }
+  .modal-body-h4{
+
+    display: flex;
+    flex-direction: column;
+   padding:  0px 26px 10px 30px;
+   gap: 8px;
+  }
+  .firstTextMod{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 0px 24px 0px 24px;
+  }
+  .firsTextH4{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    padding: 26px 24px 0px 0px;
+  }
+  .modal-body-p{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 13px 26px 10px 26px;
+  }
+  .modal-body-pp{
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: var(--grey1);
+  }
+  
+  .modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 26px;
+    background-color: var(--grey5);
+    border: 1.5px solid var(--grey5);
+    border-color: var(--grey5);
+    border-radius: 4px;
+    color: var(--grey2);
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  
+  .modal-body {
+    padding: 16px 8px;
+  }
+  
+  .show-modal {
+    display: flex;
+  }
+
+  .show-modal .modal {
+    animation: animateModal 1s;
+  }
+  .modal {
+    animation: animateClose 1s;
+  }
+  @keyframes animateModal {
+    0% {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes animateClose {
+    0%{
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(50%);
+      opacity: 1;
+    }
+  }

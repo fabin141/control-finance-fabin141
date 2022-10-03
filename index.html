@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./pages/home/index.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <title>Control Finance</title>
+</head>
+<body>
+    <header class="fontTitle">
+        <h1><span class="brand1">Control</span><span class="grey1">Finance</span></h1>
+        <button data-control-modal="modal-cadastro" class="btnLogin">Registrar novo valor</button>
+
+    </header>
+    <main class="conteiner">
+        <div class="top1">
+            <h2>
+                Resumo financeiro
+            </h2>
+            <div class="btnTop">
+                <button class="btnTodos">
+                    Todos
+                </button>
+                <button class="btnTodos">
+                    Entradas
+                </button>
+                <button class="btnTodos">
+                    Saídas
+                </button>
+            </div>
+        </div>
+        <div class="textSoma">
+            <h4 class="text-3">Soma dos Valores</h4>
+            <span id="ValorSomado"></span>
+        </div>
+        <div class="rodape" data-control-modal="modal-cadastro">
+            <h2 class="text-4">Nenhum valor encontrado</h2>
+            <p class=" text-5">Registrar novo valor</p>
+        </div>
+        <!-- <div class="redenrizarItem">
+            <ul class="redenrizarItemUl">
+                <li class="redenrizarItemUlLi">
+                    <p class="testReder">
+                        R$ 19,00
+                    </p>
+                    <div class="displayFlex">
+                    <button class="btnTestRender">
+                        Entrada
+                    </button>
+                        <img src="./Src/img/trash.png" alt="Imagem Remove item">
+                    </div>
+                </li>
+            </ul>
+        </div> -->
+    </main>
+    <div class="modal-wrapper" id="modal-cadastro">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Registro de valor</h3>
+                <button class="modal-close" data-control-modal="modal-cadastro">X</button>
+            </div>
+            <div class="modal-body">
+                <p class="firstTextMod">Digite o valor e em seguida aperte no botão referente ao tipo do valor: </p>
+                <div class="modal-body-h4">
+                    <h4 class="firsTextH4">Valor</h4>
+                    <input class='firstInput'type="text" placeholder="R$   00,00" onkeypress="return onlynumber();" id="Valor">
+                </div>
+                <div class="modal-body-p">
+                    <p class="modal-body-pp">Tipo de valor</p>
+                    <div class="btnTeste">
+                        <button class="btn-modal-1">Entrada</button>
+                        <button class="btn-modal-1">Saída</button>
+                    </div>
+                </div>
+                <div class="modal-body-btn">
+                    <button data-control-modal="modal-cadastro" class="btn-modal-cancel">Cancelar</button>
+                    <button class="btn-modal-enviar" id="Send">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./pages/home/valuesData.js"></script>
+    <script src="./pages/home/index.js"></script>
+    <script src="./scripts/modal.js"></script>
+</body>
+</html>
