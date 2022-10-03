@@ -1,6 +1,7 @@
 /* Desenvolva sua lógica aqui */
 const container = document.querySelector('.conteiner')
 const span = document.querySelector('#ValorSomado')
+const remove = document.querySelector("Remover")
 console.log(span)
 
 function criandoUl (arr){
@@ -17,7 +18,6 @@ function criandoUl (arr){
     let element = arr[i]
     if(element.categoryID === 'Entrada'){
       contador += element.value 
-
     }else {
       contador - element.categoryID
     }
@@ -39,7 +39,9 @@ function criandoUl (arr){
     p.classList.add('testReder')
     div1.classList.add('displayFlex')
     button.classList.add('btnTestRender')
+
   }
+  
 }
 criandoUl(dataBase)
 // //<div class="redenrizarItem">

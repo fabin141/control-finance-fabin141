@@ -2,7 +2,7 @@ const dataBase = [
   {
     id: 0,
     value: 199.0,
-    categoryID: 'Retirar',
+    categoryID: 'Saída',
     imagem: "./assets/trash.png",
   },
   {
