@@ -17,4 +17,16 @@ const dataBase = [
     categoryID: 'Entrada',
     imagem: "./assets/trash.png",
   },
+  {
+    id: 3,
+    value: 123.0,
+    categoryID: 'Entrada',
+    imagem: "./assets/trash.png",
+  },
+  {
+    id: 4,
+    value: 321.0,
+    categoryID: 'Saída',
+    imagem: "./assets/trash.png",
+  },
 ];

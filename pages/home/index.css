@@ -133,3 +133,6 @@ img{
     border: 1.5s solid var(--grey4);
     cursor: pointer;    
 }
+.noneDisplay{
+    display: none;
+}

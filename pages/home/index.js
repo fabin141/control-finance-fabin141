@@ -1,10 +1,12 @@
 /* Desenvolva sua lógica aqui */
 const container = document.querySelector('.conteiner')
 const span = document.querySelector('#ValorSomado')
-const remove = document.querySelector("Remover")
-console.log(span)
+const remove = document.querySelector("#Remover")
+
+
 
 function criandoUl (arr){
+  remove.classList.add('noneDisplay')
   let contador = 0
   for(let i = 0; i < arr.length; i++){
     const div = document.createElement("div")
