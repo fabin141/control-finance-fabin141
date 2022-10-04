@@ -6,7 +6,6 @@ const remove = document.querySelector("#Remover")
 
 
 function criandoUl (arr){
-  remove.classList.add('noneDisplay')
   let contador = 0
   for(let i = 0; i < arr.length; i++){
     const div = document.createElement("div")
@@ -16,6 +15,7 @@ function criandoUl (arr){
     const div1 = document.createElement('div')
     const button = document.createElement('button')
     const img = document.createElement('img')
+    remove.classList.add('noneDisplay')
     
     let element = arr[i]
     if(element.categoryID === 'Entrada'){
@@ -74,11 +74,11 @@ function onlynumber(evt) {
   }
 }
 
-const btnModal = document.querySelector("#Send")
+const btnEntrada = document.querySelector('.btnTodos');
 
-btnModal.addEventListener('Click', function(){
-    
+console.log(btnEntrada)
 
-    const numero = document.querySelector('#valor')
-    console.log(numero)
+btnEntrada.addEventListener('Click', function(event){
+  event.type;
+   let teste = [];
 })
