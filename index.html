@@ -24,14 +24,14 @@
                 Resumo financeiro
             </h2>
             <div class="btnTop">
-                <button class="btnTodos">
+                <button class="Todos btnTodos filterItem">
                     Todos
                 </button>
-                <button class="btnTodos">
-                    Entradas
+                <button class="Entrada btnTodos filterItem">
+                    Entrada
                 </button>
-                <button class="btnTodos">
-                    Saídas
+                <button class="Saída btnTodos filterItem">
+                    Saída
                 </button>
             </div>
         </div>
@@ -42,6 +42,9 @@
         <div id= "Remover"class="rodape" data-control-modal="modal-cadastro" >
             <h2 class="text-4">Nenhum valor encontrado</h2>
             <p class=" text-5">Registrar novo valor</p>
+        </div>
+        <div id="conteinerMaior">
+
         </div>
         <!-- <div class="redenrizarItem">
             <ul class="redenrizarItemUl">
@@ -59,7 +62,7 @@
             </ul>
         </div> -->
     </main>
-    <div class="modal-wrapper" id="modal-cadastro">
+    <div class="modal-wrapper" id="modal-cadastro" >
         <div class="modal">
             <div class="modal-header">
                 <h3 class="modal-title">Registro de valor</h3>
@@ -87,7 +90,7 @@
     </div>
     <script src="./pages/home/valuesData.js"></script>
     <script src="./pages/home/index.js"></script>
+    <script src="./scripts/event.js"></script>
     <script src="./scripts/modal.js"></script>
-    <img src="./assets/trash.png" alt="">
 </body>
 </html>

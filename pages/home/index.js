@@ -1,9 +1,8 @@
 /* Desenvolva sua lógica aqui */
 const container = document.querySelector('.conteiner')
 const span = document.querySelector('#ValorSomado')
+const divPrincipal = document.getElementById('conteinerMaior')
 const remove = document.querySelector("#Remover")
-
-
 
 function criandoUl (arr){
   let contador = 0
@@ -23,7 +22,7 @@ function criandoUl (arr){
     }else {
       contador - element.categoryID
     }
-    img.src = element.imagem
+    img.src = "./assets/trash.png"
     button.innerText = element.categoryID
     p.innerText = `R$ ${element.value},00`
 
@@ -34,13 +33,19 @@ function criandoUl (arr){
     ul.append(li)
     div.append(ul)
 
-    container.appendChild(div)
+    divPrincipal.appendChild(div)
     div.classList.add('redenrizarItem')
+    div.id = 'mainList'
     ul.classList.add('redenrizarItemUl')
+   img.classList.add('removendo')
     li.classList.add('redenrizarItemUlLi')
+    
     p.classList.add('testReder')
+    
     div1.classList.add('displayFlex')
+    
     button.classList.add('btnTestRender')
+    
 
   }
   
@@ -73,12 +78,3 @@ function onlynumber(evt) {
      if(theEvent.preventDefault) theEvent.preventDefault();
   }
 }
-
-const btnEntrada = document.querySelector('.btnTodos');
-
-console.log(btnEntrada)
-
-btnEntrada.addEventListener('Click', function(event){
-  event.type;
-   let teste = [];
-})
