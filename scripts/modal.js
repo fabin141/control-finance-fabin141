@@ -1,9 +1,12 @@
-/* Desenvolva sua lógica aqui */
-const buttonsControllersModal = document.querySelectorAll("[data-control-modal]")
+const btnModal = document.getElementById("btn-modal")
+const btnClose = document.getElementById("btn-close-modal")
 
-for(let index = 0; index < buttonsControllersModal.length; index++){
-    buttonsControllersModal[index].addEventListener("click", ()=>{
-        let modalId = buttonsControllersModal[index].getAttribute("data-control-modal")
-        document.getElementById(modalId).classList.toggle("show-modal")
-    })
-}
+btnModal.addEventListener("click", () => {
+    const modal = document.querySelector(".container-modal")
+    modal.style.display = "flex";
+})
+
+btnClose.addEventListener("click", () => {
+    const modal = document.querySelector(".container-modal")
+    modal.style.display = "none";
+})

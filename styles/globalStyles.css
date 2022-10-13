@@ -7,16 +7,18 @@
 }
 
 :root {
-  --brand1: #6741D9;
-  --brand2: #4C3299;
-  --brand3: #F0ECFB;
-  --grey1: #212529;
-  --grey2: #495057;
-  --grey3: #ADB5BD;
-  --grey4: #E9ECEF;
-  --grey5: #F1F3F5;
-  --mode: #FFFFFF;
+  --color-brand-1: #6741d9;
+  --color-brand-2: #4c3299;
+  --color-brand-3: #f0ecfb;
+
+  --color-grey-1: #212529;
+  --color-grey-2: #495057;
+  --color-grey-3: #adb5bd;
+  --color-grey-4: #e9ecef;
+  --color-grey-5: #f1f3f5;
   --color-grey-1-opacity-5: rgba(0, 0, 0, 0.5);
+  --fixed-white: #ffffff;
+  --color-mode: #ffffff;
 
   --font-size-1: 1.25rem;
   --font-size-2: 1rem;
@@ -48,10 +50,12 @@ body {
   margin: 0 auto;
 }
 
+.none {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .container {
-    display: flex;
-    flex-direction: column;
     max-width: 43rem;
     margin: 0 1rem;
   }

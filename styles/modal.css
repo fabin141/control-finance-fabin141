@@ -1,117 +1,123 @@
-.modal-wrapper {
-    position: fixed;
+.container-modal {
+    background-color: rgba(33, 37, 41, 0.5);
     top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color:rgba(33, 37, 41, 0.5);;
-    display: none;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal {
-    background-color: var(--mode);
-    width: 428px;
-    height: 350px;
-    border-radius: 4px;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 26px 10px 30px;
-  }
-  .modal-title{
-    line-height: 19px;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--grey1);
-  }
-  .modal-body-h4{
-
+    right: 0;
+    width: 100%;
+    height: 100vh;    
+    position: absolute;
     display: flex;
     flex-direction: column;
-   padding:  0px 26px 10px 30px;
-   gap: 8px;
-  }
-  .firstTextMod{
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    padding: 0px 24px 0px 24px;
-  }
-  .firsTextH4{
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16.94px;
-    padding: 26px 24px 0px 0px;
-  }
-  .modal-body-p{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 13px 26px 10px 26px;
-  }
-  .modal-body-pp{
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 500;
-    color: var(--grey1);
-  }
-  
-  .modal-close {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 26px;
-    background-color: var(--grey5);
-    border: 1.5px solid var(--grey5);
-    border-color: var(--grey5);
-    border-radius: 4px;
-    color: var(--grey2);
-    font-size: 16px;
-    cursor: pointer;
-    
+    display: none;
   }
   
-  .modal-body {
-    padding: 16px 8px;
-  }
-  
-  .show-modal {
-    display: flex;
-  }
-
-  .show-modal .modal {
-    animation: animateModal 1s;
-  }
   .modal {
-    animation: animateClose 1s;
+    min-width: 228px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 28px 22px;
+    gap: 25px;
+    border-radius: 8px;
+    animation-name: bounceInDown;
+    animation-duration: 0.5s;
+    /*animation-name: fadeOutUp 0.2s;*/
   }
-  @keyframes animateModal {
+  
+  .title-modal .icon {
+    font-size: 25px;
+  }
+  
+  .bts-modal {
+    width: 100%;
+  }
+  
+  .span-type-modal {
+    margin-right: 15px;
+  }
+  
+  .type-transation-modal {
+    margin-bottom: 25px;
+  }
+  
+  .btns-options {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btns-options > button {
+    margin-right: 15px;
+  }
+  
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+  
+  @keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
     0% {
-      transform: translateY(-50%);
       opacity: 0;
+      transform: translate3d(0, -3000px, 0) scaleY(3);
     }
   
-    100% {
-      transform: translateY(0);
+    60% {
       opacity: 1;
+      transform: translate3d(0, 25px, 0) scaleY(0.9);
+    }
+  
+    75% {
+      transform: translate3d(0, -10px, 0) scaleY(0.95);
+    }
+  
+    90% {
+      transform: translate3d(0, 5px, 0) scaleY(0.985);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
     }
   }
   
-  @keyframes animateClose {
-    0%{
-      transform: translateY(0);
-      opacity: 0;
+  
+  @media(max-width: 375px) {
+  
+    .modal {
+        position: absolute;
+        top: 10%;
+        width: 93%;
     }
-    100%{
-      transform: translateY(50%);
-      opacity: 1;
+  
+    .type-transation-modal {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
+  
+    .btns-options {
+        display: flex;
+        justify-content: center;
+    }
+  
+    .btns-options > button {
+        width: 100%;
+    }
+  
   }

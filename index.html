@@ -1,96 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
     <link rel="stylesheet" href="./styles/globalStyles.css">
-    <link rel="stylesheet" href="./pages/home/index.css">
     <link rel="stylesheet" href="./styles/buttons.css">
     <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/titles.css">
+    <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/modal.css">
-    <title>Control Finance</title>
+    <link rel="stylesheet" href="./styles/home.css">
 </head>
 <body>
-    <header class="fontTitle">
-        <h1><span class="brand1">Control</span><span class="grey1">Finance</span></h1>
-        <button data-control-modal="modal-cadastro" class="btnLogin">Registrar novo valor</button>
-
+    <header>
+        <div class="top container centralized">
+            <h1 class="title1-bold"><span class="control-title">Control</span>  Finance</h1>
+            <button class="primary" id="btn-modal">Registrar novo valor</button>
+        </div>
     </header>
-    <main class="conteiner">
-        <div class="top1">
-            <h2>
-                Resumo financeiro
-            </h2>
-            <div class="btnTop">
-                <button class="Todos btnTodos filterItem">
-                    Todos
-                </button>
-                <button class="Entrada btnTodos filterItem">
-                    Entrada
-                </button>
-                <button class="Saída btnTodos filterItem">
-                    Saída
-                </button>
+    <main id="app" class="container">
+        <div class="content">
+            <div class="title-home title2-medium space-between">
+                <span>Resumo financeiro</span>
+                <div class="bts-title-home">
+                    <button class="outline category outline-active" id="all">Todos</button>
+                    <button class="outline category" id="1">Entradas</button>
+                    <button class="outline category" id="2">Saídas</button>
+                </div>
             </div>
-        </div>
-        <div class="textSoma">
-            <h4 class="text-3">Soma dos Valores</h4>
-            <span id="ValorSomado"></span>
-        </div>
-        <div id= "Remover"class="rodape" data-control-modal="modal-cadastro" >
-            <h2 class="text-4">Nenhum valor encontrado</h2>
-            <p class=" text-5">Registrar novo valor</p>
-        </div>
-        <div id="conteinerMaior">
-
-        </div>
-        <!-- <div class="redenrizarItem">
-            <ul class="redenrizarItemUl">
-                <li class="redenrizarItemUlLi">
-                    <p class="testReder">
-                        R$ 19,00
-                    </p>
-                    <div class="displayFlex">
-                    <button class="btnTestRender">
-                        Entrada
-                    </button>
-                        <img src="./Src/img/trash.png" alt="Imagem Remove item">
-                    </div>
-                </li>
+            <div class="value-sum space-between">
+                <span class="text1-medium">Soma dos valores</span>
+                <span class="sum text1-medium">R$ 0,00</span>
+            </div>
+            <ul class="transations space-between">
             </ul>
-        </div> -->
-    </main>
-    <div class="modal-wrapper" id="modal-cadastro" >
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Registro de valor</h3>
-                <button class="modal-close" data-control-modal="modal-cadastro">X</button>
-            </div>
-            <div class="modal-body">
-                <p class="firstTextMod">Digite o valor e em seguida aperte no botão referente ao tipo do valor: </p>
-                <div class="modal-body-h4">
-                    <h4 class="firsTextH4">Valor</h4>
-                    <input class='firstInput'type="text" placeholder="R$   00,00" onkeypress="return onlynumber();" id="Valor">
+            
+        </div>
+        <div class="container-modal">
+            <section class="modal">
+                <div class="title-modal space-between">
+                    <span class="title2-bold">Registro de valor</span>
+                    <i class="fa-solid fa-rectangle-xmark icon" id="btn-close-modal"></i>
                 </div>
-                <div class="modal-body-p">
-                    <p class="modal-body-pp">Tipo de valor</p>
-                    <div class="btnTeste">
-                        <button class="btn-modal-1">Entrada</button>
-                        <button class="btn-modal-1">Saída</button>
+                <div class="subtitle">
+                    <span class="text1">Digite o valor e em seguida aperte no botão referente ao tipo do valor</span>
+                </div>
+                <div class="input-price">
+                    <span class="text1-medium">Valor</span>
+                    <input type="number" placeholder="R$ 00,00" id="input" required>
+                </div>
+                <div class="bts-modal">
+                    <div class="type-transation-modal">
+                        <span class="text1-medium span-type-modal">Tipo de valor</span>
+                        <button type="button" class="outline" id="entrada">Entrada</button>
+                        <button type="button" class="outline" id="saida">Saida</button>
+                    </div>
+                    <div class="btns-options">
+                        <button type="button" class="cancelar">Cancelar</button>
+                        <button type="submit" class="primary" id="btn-register">Inserir valor</button>
                     </div>
                 </div>
-                <div class="modal-body-btn">
-                    <button data-control-modal="modal-cadastro" class="btn-modal-cancel">Cancelar</button>
-                    <button class="btn-modal-enviar" id="Send">Criar</button>
-                </div>
-            </div>
+            </section>
         </div>
-    </div>
-    <script src="./pages/home/valuesData.js"></script>
-    <script src="./pages/home/index.js"></script>
-    <script src="./scripts/event.js"></script>
+    </main>
+    <script src="https://kit.fontawesome.com/5daa2ad7b0.js" crossorigin="anonymous"></script>
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/valuesData.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
